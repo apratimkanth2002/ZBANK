@@ -1,0 +1,162 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{
+    typeName: 'Bank Integration',
+    typeNamePlural: 'HDFC Bank Summary',
+    title:          { type: #STANDARD, value: 'Transactionid' },
+    description:    { type: #STANDARD, value: 'Remittername'  }
+}
+annotate view ZC_BANK with
+{
+    @UI.facet: [
+        {
+            id:       'BankDetails',
+            purpose:  #STANDARD,
+            type:     #IDENTIFICATION_REFERENCE,
+            label:    'Bank Details',
+            position: 10
+        },
+        {
+            id:       'PaymentDetails',
+            purpose:  #STANDARD,
+            type:     #IDENTIFICATION_REFERENCE,
+            label:    'Payment Details',
+            position: 20
+        }
+    ]
+
+    @EndUserText.label: 'Transaction ID'
+    @UI:{
+        lineItem:       [{ position: 10, label:  'Transaction ID',   importance: #HIGH   }],
+        identification: [{ position: 10, label: 'Transaction ID'                        }]
+//        selectionField: [{qualifier: ''}]: [{ position: 10, label: 'Transaction ID'                        }]
+    }
+    Transactionid;
+
+    @EndUserText.label: 'UTR Number'
+    @UI:{
+        lineItem:       [{ position: 20, label: 'UTR Number',       importance: #HIGH   }],
+        identification: [{ position: 20, label: 'UTR Number'                            }]
+//        selectionField: [{ position: 20, label: 'UTR Number'                            }]
+    }
+    Utr;
+
+    @EndUserText.label: 'Virtual Account'
+    @UI:{
+        lineItem:       [{ position: 30, label: 'Virtual Account',  importance: #HIGH   }],
+        identification: [{ position: 30, label: 'Virtual Account'                       }]
+//        selectionField: [{ position: 30, label: 'Virtual Account'                       }]
+    }
+    Virtualaccount;
+
+    @EndUserText.label: 'Remitter Name'
+    @UI:{
+        lineItem:       [{ position: 40, label: 'Remitter Name',    importance: #HIGH   }],
+        identification: [{ position: 40, label: 'Remitter Name'                         }]
+    }
+    Remittername;
+
+    @EndUserText.label: 'From Account Number'
+    @UI:{
+        lineItem:       [{ position: 50, label: 'From Account No',  importance: #MEDIUM }],
+        identification: [{ position: 50, label: 'From Account Number'                   }]
+    }
+    Fromaccountnumber;
+
+    @EndUserText.label: 'From Bank Name'
+    @UI:{
+        lineItem:       [{ position: 60, label: 'From Bank Name',   importance: #MEDIUM }],
+        identification: [{ position: 60, label: 'From Bank Name'                        }]
+    }
+    Frombankname;
+
+    @EndUserText.label: 'Remitter IFSC'
+    @UI:{
+        lineItem:       [{ position: 70, label: 'Remitter IFSC',    importance: #LOW    }],
+        identification: [{ position: 70, label: 'Remitter IFSC'                         }]
+    }
+    Remitterifsc;
+
+    @EndUserText.label: 'Cheque No'
+    @UI:{
+        lineItem:       [{ position: 80, label: 'Cheque No',        importance: #LOW    }],
+        identification: [{ position: 80, label: 'Cheque No'                             }]
+    }
+    Chequeno;
+
+    @EndUserText.label: 'Narration'
+    @UI:{
+        lineItem:       [{ position: 90, label: 'Narration',        importance: #LOW    }],
+        identification: [{ position: 90, label: 'Narration'                             }]
+    }
+    Narration;
+
+    @EndUserText.label: 'Value Date'
+    @UI:{
+        lineItem:       [{ position: 100, label: 'Value Date',      importance: #MEDIUM }],
+        identification: [{ position: 100, label: 'Value Date'                           }]
+//        selectionField: [{ position: 40,  label: 'Value Date'                           }]
+    }
+    Valuedate;
+
+    @EndUserText.label: 'Currency'
+    @UI:{
+        lineItem:       [{ position: 110, label: 'Currency',        importance: #LOW    }],
+        identification: [{ position: 110, label: 'Currency'                             }]
+    }
+    Waers;
+
+    @EndUserText.label: 'Amount'
+    @UI:{
+        lineItem:       [{ position: 120, label: 'Amount',          importance: #HIGH   }],
+        identification: [{ position: 120, label: 'Amount'                               }]
+    }
+    Amount;
+
+    @EndUserText.label: 'Remarks'
+    @UI:{
+        lineItem:       [{ position: 130, label: 'Remarks',         importance: #LOW    }],
+        identification: [{ position: 130, label: 'Remarks'                              }]
+    }
+    remarks;
+
+    @EndUserText.label: 'Status'
+    @UI:{
+        lineItem:       [{
+            position:    140,
+            label:       'Status',
+            importance:  #HIGH,
+            criticality: 'status'
+        }],
+        identification: [{ position: 140, label: 'Status'                               }]
+//        selectionField: [{ position: 50,  label: 'Status'                               }]
+    }
+    status;
+
+    @EndUserText.label: 'Credit Date Time'
+    @UI:{
+        lineItem:       [{ position: 150, label: 'Credit Date Time', importance: #MEDIUM }],
+        identification: [{ position: 150, label: 'Credit Date Time'                      }]
+    }
+    Creditdatetime;
+    @EndUserText.label: 'Credit Date Time Latest'
+    @UI:{
+        lineItem:       [{ position: 180, label: 'Credit Date Time Latest', importance: #MEDIUM }],
+        identification: [{ position: 180, label: 'Credit Date Time Latest'                      }]
+    }
+    creditdatetime1;
+    
+    
+    @EndUserText.label: 'Creation Date'
+    @UI:{
+        lineItem:       [{ position: 180, label: 'Creation Date', importance: #MEDIUM }],
+        identification: [{ position: 180, label: 'Creation Date'                      }]
+    }
+    creationdate;
+    
+    @EndUserText.label: 'Creation Time'
+    @UI:{
+        lineItem:       [{ position: 180, label: 'Creation Time', importance: #MEDIUM }],
+        identification: [{ position: 180, label: 'Creation Time'                      }]
+    }
+    creationtime;
+}

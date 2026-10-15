@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "HDFC Bank Summaries",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "HDFC Bank Summaries"
+  },
+  "ui5AppDetails": {
+    "appId": "hdfc"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D3A424FEAB73582872AA59DC31075A17446BFD20_TM",
+    "semanticObject": "ZHDFC",
+    "action": "ZHDFC",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D3A424FEAB73582872AA59DC31075A17446BFD20_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "HDFC Bank Summaries",
+        "subtitle": "HDFC Bank Summaries"
+      }
+    }
+  ]
+}

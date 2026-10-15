@@ -1,0 +1,39 @@
+managed implementation in class zbp_i_bank unique;
+strict ( 2 );
+
+define behavior for ZI_Bank //alias <alias_name>
+persistent table zdt_bank_intg
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+//  field ( readonly ) Transactionid;
+
+mapping for zdt_bank_intg
+
+{
+
+  transactionid      = transactionid;
+  utr                = utr;
+  virtualaccount     = virtualaccount;
+  remittername       = remittername;
+  fromaccountnumber  = fromaccountnumber;
+  frombankname       = frombankname;
+  remitterifsc       = remitterifsc;
+  chequeno           = chequeno;
+  narration          = narration;
+  valuedate          = valuedate;
+  waers              = waers;
+  amount             = amount;
+  remarks            = remarks;
+  status             = status;
+  creditdatetime     = creditdatetime;
+  creditdatetime1    = creditdatetime1;
+  creationdate       = creationdate;
+  creationtime       = creationtime;
+
+}
+}

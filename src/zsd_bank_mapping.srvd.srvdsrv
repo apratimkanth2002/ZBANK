@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition Bank Mapping field'
+define service ZSD_BANK_MAPPING {
+  expose ZI_Bank;
+  expose ZC_BANK;
+}
